@@ -464,7 +464,7 @@ export default function Home() {
         <motion.div
           key={idx}
           ref={ref}
-          className="w-full max-w-xs sm:max-w-sm md:w-64 md:h-56 cursor-pointer perspective flex flex-col items-center"
+          className="w-full max-w-xs sm:max-w-sm md:w-72 md:h-64 min-h-[220px] cursor-pointer perspective flex flex-col items-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -484,7 +484,7 @@ export default function Home() {
           </motion.div>
           <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`} style={{ perspective: '1000px' }}>
             {/* Front */}
-            <div className="absolute w-full h-full bg-white rounded-2xl shadow-md flex flex-col items-center justify-center transition-colors group hover:shadow-xl hover:scale-105 px-2 py-2" style={{ backfaceVisibility: 'hidden' }}>
+            <div className="absolute w-full h-full bg-white rounded-2xl shadow-md flex flex-col items-center justify-center transition-colors group hover:shadow-xl hover:scale-105 px-3 py-4 sm:px-4 sm:py-6" style={{ backfaceVisibility: 'hidden' }}>
               <p className="text-5xl font-extrabold text-purple-700 group-hover:text-purple-800 transition-colors">
                 {isInView ? (
                   <CountUp end={stat.value} duration={2} separator="," suffix={stat.suffix} />
@@ -495,7 +495,7 @@ export default function Home() {
               <p className="mt-3 text-gray-600 text-lg font-medium">{stat.label}</p>
             </div>
             {/* Back */}
-            <div className="absolute w-full h-full bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-3 sm:p-6 border border-purple-200 text-gray-800 transition-colors text-xs sm:text-sm md:text-base" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}>
+            <div className="absolute w-full h-full bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-3 sm:p-6 border border-purple-200 text-gray-800 transition-colors text-xs sm:text-sm md:text-base min-h-[220px]" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}>
               <span className="font-semibold text-purple-700 mb-2">{stat.label}</span>
               <span className="text-sm leading-relaxed text-center">{stat.info}</span>
             </div>
@@ -576,7 +576,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Robot Video inside News Section */}
-            <div className="relative flex justify-center py-8 mt-8 ml-0 sm:py-12 sm:mt-12 md:py-16 md:mt-20 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto" style={{ minHeight: '220px', minWidth: '220px' }}>
+            <div className="relative flex justify-center py-8 mt-24 sm:mt-16 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '220px', minWidth: '220px' }}>
               {/* Matrix rain canvas behind robot */}
               <canvas
                 ref={matrixNewsRef}
