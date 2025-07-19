@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, Link, useLocation } from "react-router-dom";
-import { Button } from "../components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const mediaItems = [
@@ -13,7 +12,6 @@ export default function Media() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
-  const navigate = useNavigate();
   const location = useLocation();
   const navLinks = [
     { name: "Home", path: "/" },
@@ -22,14 +20,6 @@ export default function Media() {
   const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  function handleAddMedia() {
-    const isAdmin = document.cookie.includes("admin_token=");
-    if (!isAdmin) {
-      navigate("/admin-login");
-    } else {
-      navigate("/add-media");
-    }
-  }
 
   return (
     <>

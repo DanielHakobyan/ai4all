@@ -1,8 +1,7 @@
 import { newsItems } from "../data/news";
 import { motion } from "framer-motion";
 import { Newspaper, Facebook, Instagram, Linkedin } from "lucide-react";
-import { Button } from "../components/ui/button";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 
 export default function News() {
@@ -10,7 +9,6 @@ export default function News() {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
   const location = useLocation();
-  const navigate = useNavigate();
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -18,14 +16,6 @@ export default function News() {
   const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  function handleAddNews() {
-    const isAdmin = document.cookie.includes("admin_token=");
-    if (!isAdmin) {
-      navigate("/admin-login");
-    } else {
-      navigate("/add-news");
-    }
-  }
 
   return (
     <>

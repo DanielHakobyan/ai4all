@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { newsItems } from "../data/news";
 import CountUp from "react-countup";
 import {
@@ -214,13 +214,6 @@ export default function Home() {
 
   const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
-
-  // Utility to scroll to top on navigation
-  function scrollToTopOnNavigate() {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []);
-  }
 
   // Matrix rain effect for news section (behind robot)
   useEffect(() => {
