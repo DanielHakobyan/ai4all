@@ -320,7 +320,7 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="absolute bottom-0 left-0 w-64 h-auto z-10"
+            className="absolute left-2 bottom-2 w-24 h-auto sm:left-4 sm:bottom-4 sm:w-40 md:w-64 z-10"
           >
             <source src="/animations/robot.webm" type="video/webm" />
             Your browser does not support the video tag.
@@ -381,27 +381,6 @@ export default function Home() {
           />
         </section>
 
-      {/* Robot Video Section (separate, after hero/Explore More) */}
-      <section className="w-full">
-        <div className="relative flex justify-start py-8 mt-20 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
-          {/* Matrix rain canvas behind robot */}
-          <canvas
-            ref={matrixNewsRef}
-            className="absolute inset-0 w-full h-full z-0 opacity-60 mix-blend-lighten pointer-events-none rounded-2xl"
-            style={{ minHeight: '120px', minWidth: '120px' }}
-          />
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-32 h-auto md:w-64 relative z-10"
-          >
-            <source src="/animations/robot.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
         {/* Mission Section Slider */}
         <section className="relative w-full py-20 bg-gradient-to-br from-[#1a1333] via-[#3f2b96] to-[#0f0c29] border-t border-b border-white/70 flex justify-center">
           <div className="absolute top-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
@@ -601,6 +580,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+            {/* Robot Video inside News Section (bottom, before footer) */}
+            <div className="relative flex justify-start py-8 mt-20 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
+              {/* Matrix rain canvas behind robot */}
+              <canvas
+                ref={matrixNewsRef}
+                className="absolute inset-0 w-full h-full z-0 opacity-60 mix-blend-lighten pointer-events-none rounded-2xl"
+                style={{ minHeight: '120px', minWidth: '120px' }}
+              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-32 h-auto md:w-64 relative z-10"
+              >
+                <source src="/animations/robot.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
 
       {/* Modern Footer Section */}
