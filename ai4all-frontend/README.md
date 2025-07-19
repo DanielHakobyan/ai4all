@@ -90,20 +90,5 @@ npm run preview
 
 ---
 
-## 🤝 Contributing
-Pull requests and suggestions are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## 📬 Contact
-For questions, feedback, or partnership inquiries:
-- **Email**: info@eif.am
-- **Phone**: +374 11 21 97 97
-- **Address**: ՀՀ, Երևան 0062, Բագրևանդի փ․ 21/1, «Ինժեներական պլազա»
-- **Facebook**: [AI4ALL by EIF](https://www.facebook.com/AI4ALLbyEIF)
-- **Instagram**: [ai4allbyeif](https://www.instagram.com/ai4allbyeif/)
-- **LinkedIn**: [Enterprise Incubator Foundation](https://www.linkedin.com/company/enterpriseincubatorfoundation/)
-
----
 
 ## © {new Date().getFullYear()} Daniel Hakobyan. All rights reserved.
