@@ -576,7 +576,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Robot Video inside News Section */}
-            <div className="relative flex justify-center py-8 mt-24 sm:mt-16 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '220px', minWidth: '220px' }}>
+            <div className="relative flex justify-center py-8 mt-40 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '220px', minWidth: '220px' }}>
               {/* Matrix rain canvas behind robot */}
               <canvas
                 ref={matrixNewsRef}
