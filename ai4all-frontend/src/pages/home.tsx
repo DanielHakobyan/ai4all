@@ -266,8 +266,8 @@ export default function Home() {
           />
           {/* Top Navbar */}
           <nav className="absolute top-0 left-0 w-full bg-white/80 border-b border-gray-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
-              <div className="flex items-center gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 gap-2 sm:gap-0">
+              <div className="flex items-center gap-4 sm:gap-8 w-full sm:w-auto justify-between">
                 <span className="font-extrabold text-xl text-purple-700 tracking-tight">AI4ALL</span>
                 <div className="flex gap-2 md:gap-4">
                   {navLinks.map(link => (
@@ -304,12 +304,14 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              {/* Projects Button on the far right */}
-              <Link to="/projects">
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
-                  Our Projects!
-                </Button>
-              </Link>
+              {/* Projects Button on the far right, responsive */}
+              <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-2 sm:mt-0">
+                <Link to="/projects" className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
+                    Our Projects!
+                  </Button>
+                </Link>
+              </div>
             </div>
           </nav>
           <video
@@ -462,7 +464,7 @@ export default function Home() {
         <motion.div
           key={idx}
           ref={ref}
-          className="w-64 h-48 cursor-pointer perspective flex flex-col items-center"
+          className="w-full max-w-xs sm:max-w-sm md:w-64 md:h-56 cursor-pointer perspective flex flex-col items-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -482,7 +484,7 @@ export default function Home() {
           </motion.div>
           <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`} style={{ perspective: '1000px' }}>
             {/* Front */}
-            <div className="absolute w-full h-full bg-white rounded-2xl shadow-md flex flex-col items-center justify-center transition-colors group hover:shadow-xl hover:scale-105" style={{ backfaceVisibility: 'hidden' }}>
+            <div className="absolute w-full h-full bg-white rounded-2xl shadow-md flex flex-col items-center justify-center transition-colors group hover:shadow-xl hover:scale-105 px-2 py-2" style={{ backfaceVisibility: 'hidden' }}>
               <p className="text-5xl font-extrabold text-purple-700 group-hover:text-purple-800 transition-colors">
                 {isInView ? (
                   <CountUp end={stat.value} duration={2} separator="," suffix={stat.suffix} />
@@ -493,7 +495,7 @@ export default function Home() {
               <p className="mt-3 text-gray-600 text-lg font-medium">{stat.label}</p>
             </div>
             {/* Back */}
-            <div className="absolute w-full h-full bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-6 border border-purple-200 text-gray-800 transition-colors" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}>
+            <div className="absolute w-full h-full bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-3 sm:p-6 border border-purple-200 text-gray-800 transition-colors text-xs sm:text-sm md:text-base" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}>
               <span className="font-semibold text-purple-700 mb-2">{stat.label}</span>
               <span className="text-sm leading-relaxed text-center">{stat.info}</span>
             </div>
@@ -520,13 +522,15 @@ export default function Home() {
                   className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
               whileHover={{ scale: 1.03 }}
             >
-              <iframe
-                    className="w-full aspect-video"
-                src={`https://www.youtube.com/embed/${id}`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                  />
+              <div className="w-full aspect-video rounded-xl overflow-hidden bg-black">
+                <iframe
+                  className="w-full h-full rounded-xl border-none"
+                  src={`https://www.youtube.com/embed/${id}`}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </motion.div>
           ))}
         </div>
@@ -545,11 +549,11 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
               <Newspaper className="w-6 h-6 text-blue-300" /> Latest News
             </h2>
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
           {newsItems.map((item) => (
             <motion.div
               key={item.title}
-                  className="bg-white/90 p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer border hover:border-blue-300"
+                  className="bg-white/90 p-4 sm:p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer border hover:border-blue-300 w-full"
                   whileHover={{ scale: 1.03 }}
             >
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -572,7 +576,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Robot Video inside News Section */}
-            <div className="relative flex justify-center py-10 mt-10 ml-0 sm:py-16 sm:mt-16 md:py-20 md:mt-24 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto" style={{ minHeight: '220px', minWidth: '220px' }}>
+            <div className="relative flex justify-center py-8 mt-8 ml-0 sm:py-12 sm:mt-12 md:py-16 md:mt-20 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto" style={{ minHeight: '220px', minWidth: '220px' }}>
               {/* Matrix rain canvas behind robot */}
               <canvas
                 ref={matrixNewsRef}

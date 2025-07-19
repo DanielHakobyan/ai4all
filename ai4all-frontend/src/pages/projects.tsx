@@ -35,8 +35,8 @@ export default function Projects() {
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white flex flex-col">
       {/* Top Navbar */}
       <nav className="w-full bg-white/80 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
-          <div className="flex items-center gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 gap-2 sm:gap-0">
+          <div className="flex items-center gap-4 sm:gap-8 w-full sm:w-auto justify-between">
             <span className="font-extrabold text-xl text-purple-700 tracking-tight">AI4ALL</span>
             <div className="flex gap-2 md:gap-4">
               {navLinks.map(link => (
@@ -73,12 +73,14 @@ export default function Projects() {
               </a>
             </div>
           </div>
-          {/* Projects Button on the far right */}
-          <Link to="/projects">
-            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
-              Our Projects!
-            </Button>
-          </Link>
+          {/* Projects Button on the far right, responsive */}
+          <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-2 sm:mt-0">
+            <Link to="/projects" className="w-full sm:w-auto">
+              <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
+                Our Projects!
+              </Button>
+            </Link>
+          </div>
         </div>
       </nav>
       <div className="flex-1 flex flex-col w-full">
