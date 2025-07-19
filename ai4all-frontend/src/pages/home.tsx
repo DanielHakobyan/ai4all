@@ -578,7 +578,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Robot Video inside News Section (bottom, before section ends) */}
-            <div className="relative flex justify-start py-8 mt-20 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
+            <div className="relative flex justify-center items-center py-8 mt-32 sm:mt-32 md:mt-28 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
               {/* Matrix rain canvas behind robot */}
               <canvas
                 ref={matrixNewsRef}
@@ -590,7 +590,7 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                className="w-32 h-auto md:w-64 relative z-10"
+                className="w-24 sm:w-32 md:w-64 h-auto relative z-10 mx-auto"
               >
                 <source src="/animations/robot.webm" type="video/webm" />
                 Your browser does not support the video tag.
