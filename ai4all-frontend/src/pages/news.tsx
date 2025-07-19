@@ -59,7 +59,7 @@ export default function News() {
           </div>
         </div>
       </nav>
-      <div className="min-h-screen bg-gradient-to-br from-[#232946] via-[#181c2a] to-[#232946] px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-[#232946] via-[#181c2a] to-[#232946] px-2 sm:px-4 py-8 md:py-16">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
             <Newspaper className="w-8 h-8 text-blue-400" />
@@ -67,7 +67,7 @@ export default function News() {
               News
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {newsItems.map((item) => (
               <motion.div
                 key={item.title}

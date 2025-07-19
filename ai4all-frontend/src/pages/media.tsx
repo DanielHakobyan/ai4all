@@ -63,14 +63,14 @@ export default function Media() {
           </div>
         </div>
       </nav>
-      <div className="min-h-screen bg-gradient-to-br from-[#232946] via-[#181c2a] to-[#232946] px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-[#232946] via-[#181c2a] to-[#232946] px-2 sm:px-4 py-8 md:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center mb-10">
             <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-500 bg-clip-text text-transparent drop-shadow-lg">
               Media Gallery
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {mediaItems.map((item) => (
               <div
                 key={item.id}

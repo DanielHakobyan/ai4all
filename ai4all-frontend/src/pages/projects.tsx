@@ -81,7 +81,7 @@ export default function Projects() {
           </Link>
         </div>
       </nav>
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col w-full">
         {/* Hero Section */}
         <section className="relative py-24 px-4 text-center flex flex-col items-center justify-center">
           <motion.div
@@ -138,9 +138,9 @@ export default function Projects() {
         </section>
 
         {/* Projects Grid */}
-        <section className="flex-1 flex flex-col items-center px-4 pb-20">
+        <section className="flex-1 flex flex-col items-center px-2 sm:px-4 pb-10 md:pb-20 w-full">
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full max-w-6xl"
             initial="hidden"
             animate="visible"
             variants={{
@@ -183,7 +183,7 @@ export default function Projects() {
             )}
           </motion.div>
           {/* Call to action for future projects */}
-          <div className="mt-16 text-center">
+          <div className="mt-10 md:mt-16 text-center">
             <p className="text-white/70 mb-4">Want to see your project here?</p>
             <button
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-8 py-3 rounded-xl text-lg"

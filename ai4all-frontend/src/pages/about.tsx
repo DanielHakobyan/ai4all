@@ -63,7 +63,7 @@ export default function About() {
           </div>
         </div>
       </nav>
-      <div className="space-y-16 px-2 md:px-0 pt-16 pb-12 bg-gradient-to-br from-[#f5f6fa] via-[#e9eafc] to-[#f5f6fa] min-h-screen">
+      <div className="space-y-10 px-2 sm:px-4 md:px-8 pt-10 md:pt-16 pb-8 md:pb-12 bg-gradient-to-br from-[#f5f6fa] via-[#e9eafc] to-[#f5f6fa] min-h-screen">
       {/* Hero Section */}
       <motion.section
         initial="hidden"
@@ -82,13 +82,13 @@ export default function About() {
 
       {/* Our Story */}
       <motion.section
-        className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white/70 rounded-3xl shadow-xl p-6 md:p-12 backdrop-blur-md"
+        className="flex flex-col md:flex-row items-center gap-6 md:gap-12 bg-white/70 rounded-3xl shadow-xl p-4 sm:p-6 md:p-12 backdrop-blur-md"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <div className="w-fit mx-auto p-4 rounded-xl bg-gradient-to-br from-purple-100 via-blue-100 to-white shadow-lg border border-purple-100">
+        <div className="w-full max-w-xs mx-auto p-4 rounded-xl bg-gradient-to-br from-purple-100 via-blue-100 to-white shadow-lg border border-purple-100">
           <img
             src="https://dl.dropboxusercontent.com/scl/fi/cgn8gvrly13uciql1j0z1/ai4all_logo.png?rlkey=n92cuxtv2wsg6g0xxalnmck16&st=41uq0jni"
             alt="Our Story"
@@ -137,7 +137,7 @@ export default function About() {
         <p className="text-gray-700 text-lg mb-8 max-w-2xl">
         Մենք տարբեր ոլորտների մասնագետներ ենք, ովքեր փորձում են ԱԲ գործիքներով փոխանցել օգտակար հմտություններ և խթանել նորարար մտածողությունը։
         </p>
-        <div className="grid md:grid-cols-3 gap-8 bg-white/70 rounded-3xl shadow-lg p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 bg-white/70 rounded-3xl shadow-lg p-4 sm:p-6">
           {[
             {
               name: "Izabella Khanzratyan",
