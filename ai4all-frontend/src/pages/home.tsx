@@ -64,11 +64,12 @@ export default function Home() {
     setChatInput("");
     setChatLoading(true);
     try {
+      const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer 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",
+          "Authorization": `Bearer ${apiKey}`,
           "HTTP-Referer": window.location.origin,
           "X-Title": "AI4ALL"
         },
@@ -379,6 +380,28 @@ export default function Home() {
             transition={{ repeat: Infinity, duration: 6 }}
           />
         </section>
+
+      {/* Robot Video Section (separate, after hero/Explore More) */}
+      <section className="w-full">
+        <div className="relative flex justify-start py-8 mt-20 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
+          {/* Matrix rain canvas behind robot */}
+          <canvas
+            ref={matrixNewsRef}
+            className="absolute inset-0 w-full h-full z-0 opacity-60 mix-blend-lighten pointer-events-none rounded-2xl"
+            style={{ minHeight: '120px', minWidth: '120px' }}
+          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-32 h-auto md:w-64 relative z-10"
+          >
+            <source src="/animations/robot.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
         {/* Mission Section Slider */}
         <section className="relative w-full py-20 bg-gradient-to-br from-[#1a1333] via-[#3f2b96] to-[#0f0c29] border-t border-b border-white/70 flex justify-center">
           <div className="absolute top-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
@@ -574,25 +597,6 @@ export default function Home() {
                   More News
                 </Button>
               </Link>
-            </div>
-            {/* Robot Video inside News Section */}
-            <div className="relative flex justify-start py-8 mt-40 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '220px', minWidth: '220px' }}>
-              {/* Matrix rain canvas behind robot */}
-              <canvas
-                ref={matrixNewsRef}
-                className="absolute inset-0 w-full h-full z-0 opacity-60 mix-blend-lighten pointer-events-none rounded-2xl"
-                style={{ minHeight: '220px', minWidth: '320px' }}
-              />
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-40 h-auto md:w-64 relative z-10"
-              >
-                <source src="/animations/robot.webm" type="video/webm" />
-                Your browser does not support the video tag.
-              </video>
             </div>
           </div>
         </div>
