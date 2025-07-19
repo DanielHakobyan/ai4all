@@ -65,6 +65,7 @@ export default function Home() {
     setChatLoading(true);
     try {
       const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+      console.log('VITE_OPENROUTER_API_KEY:', apiKey);
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -107,7 +108,7 @@ export default function Home() {
       bg: "bg-gradient-to-br from-[#1a1333] via-[#3f2b96] to-[#0f0c29]",
     },
     {
-      title: "Նպատակ #1 | Ուսուցիչների կարողությունների զարգացում",
+      title: "Նպատակ #2 | Ուսուցիչների կարողությունների զարգացում",
       content:
         "Ծրագիրը ձգտում է վերազինել ուսուցիչներին՝ AI գործիքների միջոցով դասավանդման արդյունավետությունը բարձրացնելու և կրթությունը համապատասխանեցնելու ժամանակի պահանջներին։",
       bg: "bg-gradient-to-br from-[#141e30] via-[#243b55] to-[#3a3d85]",
