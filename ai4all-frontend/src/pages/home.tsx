@@ -577,11 +577,7 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-            {/* Robot Video inside News Section (bottom, before footer) */}
+            {/* Robot Video inside News Section (bottom, before section ends) */}
             <div className="relative flex justify-start py-8 mt-20 sm:mt-24 md:mt-20 ml-0 md:ml-20 lg:ml-44 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto z-0" style={{ minHeight: '120px', minWidth: '120px' }}>
               {/* Matrix rain canvas behind robot */}
               <canvas
@@ -600,6 +596,9 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Modern Footer Section */}
