@@ -22,8 +22,8 @@ export default function Projects() {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Գլխավոր", path: "/" },
+    { name: "Մեր մասին", path: "/about" },
   ];
 
   // Filtered projects (placeholder logic)
@@ -69,7 +69,7 @@ export default function Projects() {
                   }, 600);
                 }}
               >
-                Contact
+                Կապ մեզ հետ
               </a>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Projects() {
           <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-2 sm:mt-0">
             <Link to="/projects" className="w-full sm:w-auto">
               <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
-                Our Projects!
+                Մեր ծրագրերը
               </Button>
             </Link>
           </div>
@@ -94,10 +94,11 @@ export default function Projects() {
           >
             <Sparkles className="w-14 h-14 text-purple-400 animate-pulse" />
             <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
-              Explore Our Projects
+            Հետազոտեք մեր ծրագրերը
+
             </h1>
             <p className="max-w-xl text-lg text-white/80 mb-4">
-              Discover what we've done for our country!
+            Բացահայտեք, թե ինչ ենք արել մեր երկրի համար։
             </p>
           </motion.div>
           {/* Animated background shapes */}
@@ -186,7 +187,7 @@ export default function Projects() {
           </motion.div>
           {/* Call to action for future projects */}
           <div className="mt-10 md:mt-16 text-center">
-            <p className="text-white/70 mb-4">Want to see your project here?</p>
+            <p className="text-white/70 mb-4">Կցանկանայիք մասնակցել նմանատիպ ծրագրերի?</p>
             <button
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-8 py-3 rounded-xl text-lg"
               onClick={() => {
@@ -199,8 +200,8 @@ export default function Projects() {
                   }
                 }, 600);
               }}
-            >
-              Contact Us
+            > 
+              Կապվեք հենց հիմա!
             </button>
           </div>
         </section>
@@ -218,9 +219,9 @@ export default function Projects() {
             <span className="text-xs text-purple-200">info@eif.am</span>
           </div>
           <nav className="flex gap-6 text-sm font-medium">
-            <Link to="/" className="hover:text-purple-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">About</Link>
-            <Link to="/projects" className="hover:text-purple-400 transition-colors">Projects</Link>
+            <Link to="/" className="hover:text-purple-400 transition-colors">Գլխավոր</Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">Մեր մասին</Link>
+            <Link to="/projects" className="hover:text-purple-400 transition-colors">Մեր նախագծերը</Link>
             <a
               href="#contact-footer"
               className="hover:text-purple-400 transition-colors cursor-pointer"
@@ -229,7 +230,7 @@ export default function Projects() {
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
               }}
             >
-              Contact
+              Կապ մեզ հետ
             </a>
           </nav>
           <div className="text-xs text-gray-500 text-center md:text-right flex flex-col items-center md:items-end gap-2">

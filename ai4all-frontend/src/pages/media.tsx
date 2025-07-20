@@ -14,8 +14,8 @@ export default function Media() {
   }, []);
   const location = useLocation();
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Գլխավոր", path: "/" },
+    { name: "Մեր մասին", path: "/about" },
   ];
   const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -57,7 +57,7 @@ export default function Media() {
                   }, 600);
                 }}
               >
-                Contact
+                Կապ մեզ հետ
               </a>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Media() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center mb-10">
             <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-500 bg-clip-text text-transparent drop-shadow-lg">
-              Media Gallery
+            Պատկերասրահ
             </h1>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -106,9 +106,9 @@ export default function Media() {
             <span className="text-xs text-purple-200">info@eif.am</span>
           </div>
           <nav className="flex gap-6 text-sm font-medium">
-            <Link to="/" className="hover:text-purple-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">About</Link>
-            <Link to="/projects" className="hover:text-purple-400 transition-colors">Projects</Link>
+            <Link to="/" className="hover:text-purple-400 transition-colors">Գլխավոր</Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">Մեր մասին</Link>
+            <Link to="/projects" className="hover:text-purple-400 transition-colors">Մեր ծրագրերը</Link>
             <a
               href="#contact-footer"
               className="hover:text-purple-400 transition-colors cursor-pointer"
@@ -124,7 +124,7 @@ export default function Media() {
                 }, 600);
               }}
             >
-              Contact
+              Կապ մեզ հետ
             </a>
           </nav>
           <div className="text-xs text-gray-500 text-center md:text-right flex flex-col items-center md:items-end gap-2">

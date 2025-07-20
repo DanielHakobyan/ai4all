@@ -16,8 +16,8 @@ const fadeUp = {
 export default function About() {
   const location = useLocation();
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Գլխավոր", path: "/" },
+    { name: "Մեր մասին", path: "/about" },
   ];
   const [highlightContact, setHighlightContact] = useState(false);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -57,7 +57,7 @@ export default function About() {
                   }, 600);
                 }}
               >
-                Contact
+                Կապ մեզ հետ
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function About() {
           <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-2 sm:mt-0">
             <Link to="/projects" className="w-full sm:w-auto">
               <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
-                Our Projects!
+                Մեր ծրագրերը
               </Button>
             </Link>
           </div>
@@ -81,10 +81,10 @@ export default function About() {
       >
         <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-300/20 blur-3xl rounded-full z-0" />
         <h1 className="relative z-10 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-lg">
-          About AI4ALL
+        AI4ALL-ի մասին
         </h1>
         <p className="relative z-10 mt-6 text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-          Learn more about our journey, our mission, and the amazing team powering the future of AI for everyone.
+        Իմացեք ավելին մեր անցած ճանապարհի, առաքելության և այն հրաշալի թիմի մասին, որը կառուցում է արհեստական ինտելեկտի ապագան բոլորի համար։
         </p>
       </motion.section>
 
@@ -106,7 +106,7 @@ export default function About() {
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
             <span className="inline-block w-6 h-6 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full" />
-            Our Story
+            Մեր պատմությունը
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
           AI4ALL-ը մեկնարկեց մի նպատակի շուրջ՝ տալ բոլորին հնարավորություն կիրառելու արհեստական բանականությունը սովորելու, ստեղծագործելու և զարգանալու համար։
@@ -124,7 +124,7 @@ export default function About() {
       >
         <div className="absolute -top-16 right-10 w-48 h-48 bg-white/10 blur-2xl rounded-full z-0" />
         <Star className="mx-auto w-12 h-12 mb-4 text-white/80 animate-pulse z-10 relative" />
-        <h2 className="text-3xl font-bold mb-4 z-10 relative">Our Vision</h2>
+        <h2 className="text-3xl font-bold mb-4 z-10 relative">ՄԵր հեռանկարները</h2>
         <p className="text-lg max-w-3xl mx-auto z-10 relative">
         Մենք ձգտում ենք մի աշխարհի, որտեղ արհեստական բանականությունը հասանելի է յուրաքանչյուրի համար՝ անկախ վայրից կամ մասնագիտությունից։ AI4ALL-ը նպատակ ունի զարգացնել հմտություններ, որոնք կնպաստեն ստեղծարարության, կրթության և աշխատաշուկայում մրցունակության աճին։ Մենք հավատում ենք՝ տեխնոլոգիան պետք է ծառայի մարդուն՝ ընդլայնելով նրա հնարավորությունները։
         </p>
@@ -140,7 +140,7 @@ export default function About() {
       >
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <Users className="w-6 h-6 text-purple-600" />
-          Meet the Team
+          Ահա և մեր թիմը!
         </h2>
         <p className="text-gray-700 text-lg mb-8 max-w-2xl">
         Մենք տարբեր ոլորտների մասնագետներ ենք, ովքեր փորձում են ԱԲ գործիքներով փոխանցել օգտակար հմտություններ և խթանել նորարար մտածողությունը։
@@ -188,14 +188,16 @@ export default function About() {
         variants={fadeUp}
       >
         <Heart className="w-8 h-8 mx-auto text-pink-500 mb-4 animate-bounce" />
-        <h2 className="text-3xl font-bold mb-2">Thank you!</h2>
+        <h2 className="text-3xl font-bold mb-2">Շնորհակալություն!</h2>
         <p className="text-gray-700 max-w-xl mx-auto mb-6">
-        Thank you for being part of this journey.
+        Շնորհակալ ենք, որ մեզ հետ եք այս ճանապարհին:
 
         </p>
-        <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg hover:from-purple-700 hover:to-blue-700">
-          Get Started
-        </Button>
+        <Link to="/projects">
+          <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg hover:from-purple-700 hover:to-blue-700">
+            Միացեք հիմա
+          </Button>
+        </Link>
       </motion.section>
       {/* Modern Footer Section (with animated contact info) */}
       <footer id="contact-footer" className="bg-gradient-to-br from-[#181c2a] via-[#232946] to-[#181c2a] py-10 px-4 text-gray-200 mt-16">
@@ -210,9 +212,9 @@ export default function About() {
             <span className="text-xs text-purple-200">info@eif.am</span>
           </div>
           <nav className="flex gap-6 text-sm font-medium">
-            <Link to="/" className="hover:text-purple-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">About</Link>
-            <Link to="/projects" className="hover:text-purple-400 transition-colors">Projects</Link>
+            <Link to="/" className="hover:text-purple-400 transition-colors">Գլխավոր</Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">Մեր մասին</Link>
+            <Link to="/projects" className="hover:text-purple-400 transition-colors">Մեր ծրագրերը</Link>
             <a
               href="#contact-footer"
               className="hover:text-purple-400 transition-colors cursor-pointer"
@@ -228,7 +230,7 @@ export default function About() {
                 }, 600);
               }}
             >
-              Contact
+              Կապ մեզ հետ
             </a>
           </nav>
           <div className="text-xs text-gray-500 text-center md:text-right flex flex-col items-center md:items-end gap-2">

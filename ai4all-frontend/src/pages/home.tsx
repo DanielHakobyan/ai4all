@@ -65,7 +65,6 @@ export default function Home() {
     setChatLoading(true);
     try {
       const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
-      console.log('VITE_OPENROUTER_API_KEY:', apiKey);
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -81,7 +80,6 @@ export default function Home() {
         })
       });
       const data = await res.json();
-      console.log('OpenRouter API response:', data);
       if (data.error) {
         setChatMessages(msgs => [...msgs, { role: "assistant", content: `Error: ${data.error.message || data.error}` }]);
         return;
@@ -210,8 +208,8 @@ export default function Home() {
 
   // Navbar links
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Գլխավոր", path: "/" },
+    { name: "Մեր մասին", path: "/about" },
   ];
 
   const [highlightContact, setHighlightContact] = useState(false);
@@ -302,7 +300,7 @@ export default function Home() {
                       }, 600);
                     }}
                   >
-                    Contact
+                    Կապ ՄԵզ Հետ
                   </a>
                 </div>
               </div>
@@ -310,7 +308,7 @@ export default function Home() {
               <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-2 sm:mt-0">
                 <Link to="/projects" className="w-full sm:w-auto">
                   <Button className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-6 py-2 rounded-xl text-base">
-                    Our Projects!
+                  Մեր ծրագրերը
                   </Button>
                 </Link>
               </div>
@@ -342,7 +340,7 @@ export default function Home() {
           variants={fadeUp}
             transition={{ delay: 0.2 }}
         >
-            A stronger Armenia with Artificial Intelligence
+            Ավելի հզոր Հայաստան արհեստական ինտելեկտով
         </motion.p>
         <motion.div
             className="mt-8 flex justify-center gap-4 flex-wrap"
@@ -356,7 +354,7 @@ export default function Home() {
                 size="lg"
                 className="bg-purple-700 text-purple-700 hover:bg-white/90"
               >
-              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              Իմացեք ավելին <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
           </motion.div>
@@ -372,7 +370,7 @@ export default function Home() {
               size="lg"
               className="flex items-center gap-2 border-white text-white hover:bg-white/20"
             >
-              Explore More <ArrowRight className="h-5 w-5" />
+              Ուսումնասիրեք ավելին <ArrowRight className="h-5 w-5" />
             </Button>
           </motion.div>
           <motion.div
@@ -442,7 +440,7 @@ export default function Home() {
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
   >
-    AI4ALL in Numbers
+    AI4ALL-ը թվերով
   </motion.h2>
 
   <div className="flex flex-wrap justify-center gap-16 px-6 max-w-5xl mx-auto mt-12 bg-white/10 rounded-3xl shadow-lg py-12">
@@ -542,7 +540,7 @@ export default function Home() {
                 <Button
                   className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 px-8 py-3 rounded-xl text-lg"
                 >
-                  See All Media
+                  Դիտել բոլոր նյութերը
                 </Button>
           </Link>
         </div>
@@ -550,7 +548,7 @@ export default function Home() {
           {/* News Column */}
           <div>
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
-              <Newspaper className="w-6 h-6 text-blue-300" /> Latest News
+              <Newspaper className="w-6 h-6 text-blue-300" /> Վերջին Լուրերը
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:gap-6">
           {newsItems.map((item) => (
@@ -574,7 +572,7 @@ export default function Home() {
                 <Button
                   className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 px-8 py-3 rounded-xl text-lg"
                 >
-                  More News
+                  Ավելին լուրերում
                 </Button>
               </Link>
             </div>
@@ -607,7 +605,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div
             ref={contactRef}
-            className={`flex flex-col items-center md:items-start gap-2 relative transition-all duration-300 ${highlightContact ? 'contact-highlight-animate' : ''}`}
+            className={`flex flex-col items-center md:items-start text-center md:text-left gap-2 relative transition-all duration-300 ${highlightContact ? 'contact-highlight-animate' : ''}`}
           >
             <span className="font-extrabold text-xl text-purple-400 tracking-tight">AI4ALL</span>
             <span className="text-xs text-purple-200 mt-1">Հայաստանի Հանրապետություն, Երևան 0062, Բագրևանդի փ․ 21/1, «Ինժեներական պլազա»</span>
@@ -615,9 +613,9 @@ export default function Home() {
             <span className="text-xs text-purple-200">info@eif.am</span>
           </div>
           <nav className="flex gap-6 text-sm font-medium">
-            <Link to="/" className="hover:text-purple-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">About</Link>
-            <Link to="/projects" className="hover:text-purple-400 transition-colors">Projects</Link> {/* Added Projects link */}
+            <Link to="/" className="hover:text-purple-400 transition-colors">Գլխավոր</Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">Մեր մասին</Link>
+            <Link to="/projects" className="hover:text-purple-400 transition-colors">Մեր ծրագրերը</Link> {/* Added Projects link */}
             <a
               href="#contact-footer"
               className="hover:text-purple-400 transition-colors cursor-pointer"
@@ -626,7 +624,7 @@ export default function Home() {
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
               }}
             >
-              Contact
+              Կապ մեզ հետ
             </a>
           </nav>
           <div className="text-xs text-gray-500 text-center md:text-right flex flex-col items-center md:items-end gap-2">
